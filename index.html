@@ -21,6 +21,11 @@
         }
         var map = new google.maps.Map(document.getElementById('map'), options);
 
+
+        google.maps.event.addListener(map, 'click', function (event) {
+            addMarker({coords:event.latLng})
+        })
+
         /**
         var marker = new google.maps.Marker({
                 position:{lat:50.462742, lng:30.449433},
@@ -55,7 +60,7 @@
             addMarker(markers[i])
         }
 
-        a
+
 
 
         function addMarker(props) {
